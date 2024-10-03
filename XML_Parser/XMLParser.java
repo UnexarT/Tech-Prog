@@ -67,7 +67,7 @@ public class XMLParser {
                     } else if (lines_item.startsWith("<country>")) {
                         address.setCountry(extractValue(lines_item, "country"));
                     } else if (lines_item.startsWith("<format>")) {
-                        book.setFormat(extractValue(line, "format"));
+                        book.setFormat(extractValue(lines_item, "format"));
                     } else if (lines_item.startsWith("</address>")) {
                         publisher.setAddress(address);
                     } else if (lines_item.startsWith("</publisher>")) {
